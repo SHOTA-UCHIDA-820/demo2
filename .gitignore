@@ -35,3 +35,31 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Eclipse用
+.metadata/
+*.classpath
+*.project
+*.settings/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# その他
+out/
+target/
+*.log
+
