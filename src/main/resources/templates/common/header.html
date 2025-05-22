@@ -1,0 +1,11 @@
+<div th:fragment="header">
+    <header>
+        <div class="logo">DEMO</div>
+        <nav>
+            <ul>
+                <li th:each="link : ${menuLinks}" th:text="${link}"></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
