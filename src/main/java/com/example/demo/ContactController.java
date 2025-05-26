@@ -6,6 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Map;
+import java.util.LinkedHashMap;
+
 
 @Controller
 public class ContactController {
@@ -18,11 +21,17 @@ public class ContactController {
         user.setPhoneNumber("000-000-0000");
 
         List<String> inquiries = List.of("◯◯◯の問い合わせ", "×××の問い合わせ", "△△△の問い合わせ");
-        List<String> menu = List.of("TOP", "ABOUT", "CONTACT");
+
+     
+        Map<String, String> menu = new LinkedHashMap<>();
+        menu.put("TOP", "/");            
+        menu.put("ABOUT", "/about");
+        menu.put("CONTACT", "/contact");
 
         model.addAttribute("user", user);
         model.addAttribute("inquiryTypes", inquiries);
-        model.addAttribute("menuLinks", menu);
+        model.addAttribute("menuLinks", menu); 
+
         return "contact";
     }
 }

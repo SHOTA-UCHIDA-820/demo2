@@ -1,8 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     background-color: #fff;
     color: #333;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    color: black;  
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: underline;
 }
 
 header {
@@ -48,7 +65,7 @@ nav li {
 
 label {
     width: 150px;
-	font-weight: bold;
+    font-weight: bold;
 }
 
 input[type="text"],
@@ -68,8 +85,10 @@ input[type="tel"] {
 
 footer {
     text-align: center;
-    padding:  5px 20px;
+    padding: 15px 20px;
     background-color: #000;
     color: white;
     margin-top: 60px;
 }
+
+

@@ -2,9 +2,11 @@
     <header>
         <div class="logo">DEMO</div>
         <nav>
-            <ul>
-                <li th:each="link : ${menuLinks}" th:text="${link}"></li>
-            </ul>
+			<ul>
+			  <li th:each="entry : ${menuLinks}">
+			    <a th:href="${entry.value}" th:text="${entry.key}"></a>
+			  </li>
+			</ul>
         </nav>
     </header>
 </div>
