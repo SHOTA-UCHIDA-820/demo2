@@ -9,11 +9,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.LinkedHashMap;
 
-
 @Controller
 public class ContactController {
 
-    @GetMapping("/")
+    @GetMapping("/contact")
     public String contact(Model model) {
         User user = new User();
         user.setName("田中太郎");
@@ -22,15 +21,14 @@ public class ContactController {
 
         List<String> inquiries = List.of("◯◯◯の問い合わせ", "×××の問い合わせ", "△△△の問い合わせ");
 
-     
         Map<String, String> menu = new LinkedHashMap<>();
-        menu.put("TOP", "/");            
+        menu.put("TOP", "/");
         menu.put("ABOUT", "/about");
         menu.put("CONTACT", "/contact");
 
         model.addAttribute("user", user);
         model.addAttribute("inquiryTypes", inquiries);
-        model.addAttribute("menuLinks", menu); 
+        model.addAttribute("menuLinks", menu);
 
         return "contact";
     }
